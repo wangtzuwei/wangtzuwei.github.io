@@ -16,11 +16,11 @@
           <span>Tzu-Wei Wang</span>
         </a>
         <div class="nav-links" aria-label="Portfolio pages">
-          <a href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="outputs.html">Outputs</a>
-          <a href="awards.html">Awards</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html"><span class="icon" data-icon="home" aria-hidden="true"></span><span>Home</span></a>
+          <a href="research.html"><span class="icon" data-icon="microscope" aria-hidden="true"></span><span>Research</span></a>
+          <a href="outputs.html"><span class="icon" data-icon="presentation" aria-hidden="true"></span><span>Outputs</span></a>
+          <a href="awards.html"><span class="icon" data-icon="trophy" aria-hidden="true"></span><span>Awards</span></a>
+          <a href="contact.html"><span class="icon" data-icon="mail" aria-hidden="true"></span><span>Contact</span></a>
         </div>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.95-6.95 1.41-1.41M3.64 20.36l1.41-1.41m13.9 0 1.41 1.41M3.64 3.64l1.41 1.41"></path><circle cx="12" cy="12" r="4"></circle></svg>
@@ -39,32 +39,32 @@
           </p>
           <div class="action-row" aria-label="Primary actions">
             <a class="button primary" href="contact.html">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+              <span class="icon" data-icon="mail" aria-hidden="true"></span>
               Contact
             </a>
             <a class="button secondary" href="research.html">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m8 15 3-4 3 2 4-6"></path></svg>
+              <span class="icon" data-icon="microscope" aria-hidden="true"></span>
               View Research
             </a>
             <a class="button ghost" href="assets/tsmc_CV.pdf" download>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+              <span class="icon" data-icon="download" aria-hidden="true"></span>
               Download CV
             </a>
           </div>
         </div>
         <div class="profile-panel" aria-label="Profile summary">
-          <img class="profile-image" src="assets/profile-placeholder.webp" width="900" height="900" alt="Tzu-Wei Wang profile visual with initials">
+          <img class="profile-image" src="assets/profile-photo.webp" width="900" height="900" alt="Formal headshot of Tzu-Wei Wang">
           <div class="profile-facts">
             <div>
-              <span>NTU Singapore</span>
+              <span class="fact-label"><span class="icon" data-icon="graduation" aria-hidden="true"></span>NTU Singapore</span>
               <strong>MSE + Data Analytics</strong>
             </div>
             <div>
-              <span>GPA</span>
+              <span class="fact-label"><span class="icon" data-icon="sparkles" aria-hidden="true"></span>GPA</span>
               <strong>4.84 / 5.00</strong>
             </div>
             <div>
-              <span>Focus</span>
+              <span class="fact-label"><span class="icon" data-icon="flask" aria-hidden="true"></span>Focus</span>
               <strong>Microscopy, HEAs/SRMs, ML</strong>
             </div>
           </div>
@@ -73,14 +73,17 @@
 
       <section class="metric-strip" aria-label="Portfolio snapshot">
         <div>
+          <span class="icon metric-icon" data-icon="flask" aria-hidden="true"></span>
           <strong>4</strong>
           <span>Research experiences</span>
         </div>
         <div>
+          <span class="icon metric-icon" data-icon="award" aria-hidden="true"></span>
           <strong>7+</strong>
           <span>Awards and funding recognitions</span>
         </div>
         <div>
+          <span class="icon metric-icon" data-icon="calendar" aria-hidden="true"></span>
           <strong>2026</strong>
           <span>M&M abstract and TMS presentation</span>
         </div>
@@ -94,22 +97,22 @@
         </div>
         <div class="route-grid">
           <a class="route-card" href="research.html">
-            <span>01</span>
+            <div class="route-top"><span>01</span><span class="icon" data-icon="microscope" aria-hidden="true"></span></div>
             <h3>Research</h3>
             <p>Internships and projects across HEA-based SRMs, TEM simulation, microscopy informatics, and H2O2 electrosynthesis.</p>
           </a>
           <a class="route-card" href="outputs.html">
-            <span>02</span>
+            <div class="route-top"><span>02</span><span class="icon" data-icon="presentation" aria-hidden="true"></span></div>
             <h3>Outputs</h3>
             <p>Conference presentations, accepted abstracts, submitted work, data publication, and manuscripts in preparation.</p>
           </a>
           <a class="route-card" href="awards.html">
-            <span>03</span>
+            <div class="route-top"><span>03</span><span class="icon" data-icon="trophy" aria-hidden="true"></span></div>
             <h3>Awards</h3>
             <p>Research funding, poster awards, scholarships, iGEM recognition, and ACS student leadership.</p>
           </a>
           <a class="route-card" href="contact.html">
-            <span>04</span>
+            <div class="route-top"><span>04</span><span class="icon" data-icon="mail" aria-hidden="true"></span></div>
             <h3>Contact</h3>
             <p>Email, LinkedIn, CV download, language profile, and current collaboration interests.</p>
           </a>
@@ -119,7 +122,7 @@
       <section class="feature-band" aria-labelledby="signal-title">
         <div class="feature-copy">
           <p class="eyebrow">Research Signal</p>
-          <h2 id="signal-title">Characterization-driven materials informatics</h2>
+          <h2 id="signal-title"><span class="icon heading-icon" data-icon="chart" aria-hidden="true"></span>Characterization-driven materials informatics</h2>
           <p>
             My work starts with measurement quality: controlled imaging parameters, interpretable characterization, and ML workflows that stay anchored to physical meaning.
           </p>
@@ -130,7 +133,7 @@
 
     <footer class="site-footer">
       <p>Tzu-Wei Wang | Materials Science & Data Analytics</p>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html"><span class="icon" data-icon="mail" aria-hidden="true"></span>Contact</a>
     </footer>
     <script src="script.js"></script>
   </body>
