@@ -59,25 +59,6 @@ svg {
   display: block;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  display: inline-grid;
-  place-items: center;
-  flex: 0 0 auto;
-  color: currentColor;
-}
-
-.icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.9;
-}
-
 button {
   font: inherit;
 }
@@ -120,6 +101,7 @@ button {
 .page-hero,
 .section-band,
 .metric-strip,
+.logo-strip,
 .feature-band,
 .site-footer {
   width: min(var(--max), calc(100% - 32px));
@@ -169,7 +151,6 @@ button {
   min-height: 40px;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
   padding: 0 12px;
   border-radius: 6px;
   color: var(--muted-ink);
@@ -186,8 +167,9 @@ button {
 }
 
 .theme-toggle {
-  width: 44px;
+  min-width: 62px;
   height: 44px;
+  padding: 0 13px;
   border: 1px solid var(--line);
   border-radius: 8px;
   display: grid;
@@ -206,29 +188,14 @@ button {
   transform: scale(0.97);
 }
 
-.theme-toggle svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.9;
-}
-
-[data-theme="light"] .icon-moon,
-[data-theme="dark"] .icon-sun {
-  display: none;
-}
-
 .hero {
   padding: 72px 0 44px;
 }
 
 .split-hero {
-  min-height: calc(100dvh - 112px);
+  min-height: calc(100dvh - 180px);
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.76fr);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
   gap: 52px;
   align-items: center;
 }
@@ -351,16 +318,21 @@ h3 {
 }
 
 .profile-panel {
+  width: min(100%, 360px);
+  justify-self: end;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
-  overflow: hidden;
 }
 
 .profile-image {
-  width: 100%;
+  width: min(176px, 52vw);
   aspect-ratio: 1 / 1;
+  margin: 0 auto 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   object-fit: cover;
   object-position: center top;
 }
@@ -368,26 +340,15 @@ h3 {
 .profile-facts {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
-  background: var(--line);
+  gap: 10px;
+  background: transparent;
 }
 
 .profile-facts div {
-  padding: 18px;
-  background: var(--surface);
-}
-
-.fact-label,
-.contact-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.profile-facts .fact-label .icon,
-.contact-label .icon {
-  width: 16px;
-  height: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
 }
 
 .profile-facts span,
@@ -440,12 +401,60 @@ h3 {
   font-weight: 650;
 }
 
-.metric-strip .metric-icon {
-  width: 25px;
-  height: 25px;
-  display: inline-grid;
-  margin: 0 0 13px;
-  color: var(--teal);
+.logo-strip {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.logo-strip-copy h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.logo-card {
+  min-height: 132px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.logo-card img,
+.card-logo {
+  width: 100%;
+  height: 72px;
+  object-fit: contain;
+  object-position: left center;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.logo-card span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted-ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.card-logo {
+  height: 64px;
+  margin-bottom: 18px;
 }
 
 .section-band {
@@ -519,29 +528,6 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.route-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.route-top .icon {
-  width: 30px;
-  height: 30px;
-  color: var(--primary);
-}
-
-.heading-icon {
-  width: 0.92em;
-  height: 0.92em;
-  display: inline-grid;
-  margin-right: 9px;
-  color: var(--teal);
-  transform: translateY(0.1em);
-}
-
 .route-card p,
 .project-card p,
 .output-card p,
@@ -568,74 +554,13 @@ h3 {
   margin-top: 8px;
 }
 
-.project-card.featured-card {
-  grid-column: 1 / -1;
-  min-height: auto;
-  display: grid;
-  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1fr);
-  padding: 0;
-  overflow: hidden;
-}
-
-.card-body {
-  padding: 26px;
-}
-
-.featured-card .card-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.featured-card .card-body ul {
-  margin-top: auto;
-}
-
-.card-media {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-  overflow: hidden;
-  border-right: 1px solid var(--line);
+.context-note {
+  margin-top: -4px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--teal);
   background: var(--surface-2);
-}
-
-.card-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  object-fit: cover;
-}
-
-.portrait-media img {
-  object-position: center center;
-}
-
-.wide-media img {
-  object-position: center center;
-}
-
-.card-media figcaption {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  left: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
-  background: rgba(17, 20, 20, 0.78);
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 760;
-  line-height: 1.35;
-  backdrop-filter: blur(12px);
-}
-
-.card-media figcaption .icon {
-  width: 16px;
-  height: 16px;
+  color: var(--muted-ink);
+  font-size: 0.92rem;
 }
 
 .project-meta {
@@ -664,19 +589,34 @@ h3 {
   transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
-.output-card.photo-card {
+.output-card.with-proof {
   grid-column: span 2;
-  min-height: 340px;
+  min-height: 280px;
   display: grid;
-  grid-template-columns: minmax(240px, 0.86fr) minmax(0, 1fr);
-  padding: 0;
-  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 18px;
+  align-items: start;
 }
 
-.output-card.photo-card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.proof-thumb {
+  margin: 0;
+}
+
+.proof-thumb img {
+  width: 150px;
+  height: 112px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.proof-thumb figcaption {
+  margin-top: 8px;
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .stack-list {
@@ -731,13 +671,6 @@ h3 {
   min-height: 245px;
 }
 
-.timeline-icon {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 16px;
-  color: var(--primary);
-}
-
 .timeline time {
   display: inline-block;
   margin-bottom: 18px;
@@ -747,6 +680,11 @@ h3 {
 
 .contact-card {
   min-height: 210px;
+}
+
+.contact-portrait {
+  max-width: 230px;
+  justify-self: end;
 }
 
 .site-footer {
@@ -780,7 +718,7 @@ h3 {
   }
 
   .profile-panel {
-    max-width: 520px;
+    justify-self: start;
   }
 
   .timeline,
@@ -788,7 +726,11 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .output-card.photo-card {
+  .logo-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .output-card.with-proof {
     grid-column: 1 / -1;
   }
 }
@@ -824,11 +766,6 @@ h3 {
     white-space: nowrap;
   }
 
-  .nav-links .icon {
-    width: 16px;
-    height: 16px;
-  }
-
   .hero,
   .page-hero,
   .section-band,
@@ -855,6 +792,7 @@ h3 {
   }
 
   .metric-strip,
+  .logo-grid,
   .route-grid,
   .project-grid,
   .output-grid,
@@ -873,18 +811,18 @@ h3 {
     min-height: auto;
   }
 
-  .project-card.featured-card,
-  .output-card.photo-card {
+  .output-card.with-proof {
     grid-template-columns: 1fr;
   }
 
-  .card-media {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+  .proof-thumb img {
+    width: min(100%, 220px);
+    height: 150px;
   }
 
-  .card-media img {
-    min-height: 300px;
+  .contact-portrait {
+    max-width: 220px;
+    justify-self: start;
   }
 }
 
@@ -894,6 +832,7 @@ h3 {
   .page-hero,
   .section-band,
   .metric-strip,
+  .logo-strip,
   .feature-band,
   .site-footer {
     width: min(var(--max), calc(100% - 24px));
