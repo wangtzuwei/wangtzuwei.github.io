@@ -318,9 +318,9 @@ h3 {
 }
 
 .profile-panel {
-  width: min(100%, 360px);
+  width: min(100%, 320px);
   justify-self: end;
-  padding: 22px;
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -328,13 +328,14 @@ h3 {
 }
 
 .profile-image {
-  width: min(176px, 52vw);
-  aspect-ratio: 1 / 1;
-  margin: 0 auto 20px;
+  width: min(124px, 38vw);
+  height: 156px;
+  margin: 0 auto 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  object-fit: cover;
-  object-position: center top;
+  background: #ffffff;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .profile-facts {
@@ -437,11 +438,16 @@ h3 {
   width: 100%;
   height: 72px;
   object-fit: contain;
-  object-position: left center;
+  object-position: center center;
   padding: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
+}
+
+.logo-card.brand-dark-logo img,
+.card-logo.brand-dark-logo {
+  background: #111414;
 }
 
 .logo-card span {
@@ -455,6 +461,20 @@ h3 {
 .card-logo {
   height: 64px;
   margin-bottom: 18px;
+}
+
+.institution-label {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 850;
 }
 
 .section-band {
@@ -545,6 +565,13 @@ h3 {
   transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
+.project-card-with-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 136px;
+  gap: 18px;
+  align-items: start;
+}
+
 .project-card ul {
   margin: auto 0 0;
   padding-left: 20px;
@@ -552,15 +579,6 @@ h3 {
 
 .project-card li + li {
   margin-top: 8px;
-}
-
-.context-note {
-  margin-top: -4px;
-  padding: 12px 14px;
-  border-left: 3px solid var(--teal);
-  background: var(--surface-2);
-  color: var(--muted-ink);
-  font-size: 0.92rem;
 }
 
 .project-meta {
@@ -610,6 +628,13 @@ h3 {
   border-radius: 8px;
   object-fit: cover;
   object-position: center center;
+}
+
+.lab-thumb img {
+  width: 136px;
+  height: 181px;
+  aspect-ratio: auto;
+  background: #ffffff;
 }
 
 .proof-thumb figcaption {
@@ -811,13 +836,19 @@ h3 {
     min-height: auto;
   }
 
-  .output-card.with-proof {
+  .output-card.with-proof,
+  .project-card-with-proof {
     grid-template-columns: 1fr;
   }
 
   .proof-thumb img {
     width: min(100%, 220px);
     height: 150px;
+  }
+
+  .lab-thumb img {
+    width: min(100%, 150px);
+    height: 200px;
   }
 
   .contact-portrait {
