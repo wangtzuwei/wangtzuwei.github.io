@@ -1,10 +1,10 @@
 # Tzu-Wei Wang Personal Site
 
-Static GitHub Pages portfolio built from the TSMC CV.
+Static multi-page GitHub Pages portfolio built from the TSMC CV.
 
 ## Local Preview
 
-Open `index.html` in a browser.
+Open `index.html` in a browser. The site has separate pages for Home, Research, Outputs, Awards, and Contact.
 
 ## GitHub Pages
 
