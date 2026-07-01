@@ -729,6 +729,54 @@ h3 {
   min-height: 210px;
 }
 
+.chess-note {
+  margin-bottom: 0;
+}
+
+.chess-ratings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0 8px;
+}
+
+.chess-ratings div {
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.chess-ratings dt,
+.chess-ratings dd {
+  margin: 0;
+}
+
+.chess-ratings dt {
+  color: var(--muted-ink);
+  font-size: 0.7rem;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.chess-ratings dd {
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 820;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.chess-ratings .is-unavailable {
+  opacity: 0.68;
+}
+
+.chess-status {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 .contact-portrait {
   max-width: 230px;
   justify-self: end;
