@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Queen's Gambit opening position</title>
+  <desc id="desc">Chess board after the moves 1 d4, d5, 2 c4.</desc>
+  <defs>
+    <pattern id="squares" x="80" y="80" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="#f2dfc5"/>
+      <rect x="80" width="80" height="80" fill="#8f6a4b"/>
+      <rect y="80" width="80" height="80" fill="#8f6a4b"/>
+    </pattern>
+    <clipPath id="boardClip">
+      <rect x="80" y="80" width="640" height="640" rx="18"/>
+    </clipPath>
+    <style>
+      .coord { fill: #536067; font: 700 20px Inter, Arial, sans-serif; text-anchor: middle; }
+      .rank { dominant-baseline: middle; }
+      .piece { font: 58px "Segoe UI Symbol", "Noto Sans Symbols 2", "Arial Unicode MS", serif; text-anchor: middle; dominant-baseline: central; }
+      .white { fill: #fbfcfc; stroke: #202828; stroke-width: 1.6px; paint-order: stroke; }
+      .black { fill: #111414; stroke: #f2dfc5; stroke-width: 0.8px; paint-order: stroke; }
+      .highlight { fill: #1f5eff; opacity: 0.2; }
+    </style>
+  </defs>
+  <rect width="800" height="800" rx="34" fill="#fbfcfc"/>
+  <rect x="68" y="68" width="664" height="664" rx="24" fill="#ffffff" stroke="#d8e0e0" stroke-width="2"/>
+  <rect x="80" y="80" width="640" height="640" fill="url(#squares)" clip-path="url(#boardClip)"/>
+  <g clip-path="url(#boardClip)">
+    <rect class="highlight" x="240" y="400" width="80" height="80"/>
+    <rect class="highlight" x="320" y="400" width="80" height="80"/>
+    <rect class="highlight" x="320" y="320" width="80" height="80"/>
+  </g>
+
+  <g class="coord">
+    <text x="120" y="752">a</text><text x="200" y="752">b</text><text x="280" y="752">c</text><text x="360" y="752">d</text>
+    <text x="440" y="752">e</text><text x="520" y="752">f</text><text x="600" y="752">g</text><text x="680" y="752">h</text>
+    <text class="rank" x="48" y="120">8</text><text class="rank" x="48" y="200">7</text><text class="rank" x="48" y="280">6</text><text class="rank" x="48" y="360">5</text>
+    <text class="rank" x="48" y="440">4</text><text class="rank" x="48" y="520">3</text><text class="rank" x="48" y="600">2</text><text class="rank" x="48" y="680">1</text>
+  </g>
+
+  <g class="piece black">
+    <text x="120" y="120">♜</text><text x="200" y="120">♞</text><text x="280" y="120">♝</text><text x="360" y="120">♛</text>
+    <text x="440" y="120">♚</text><text x="520" y="120">♝</text><text x="600" y="120">♞</text><text x="680" y="120">♜</text>
+    <text x="120" y="200">♟</text><text x="200" y="200">♟</text><text x="280" y="200">♟</text><text x="440" y="200">♟</text>
+    <text x="520" y="200">♟</text><text x="600" y="200">♟</text><text x="680" y="200">♟</text><text x="360" y="360">♟</text>
+  </g>
+  <g class="piece white">
+    <text x="120" y="680">♖</text><text x="200" y="680">♘</text><text x="280" y="680">♗</text><text x="360" y="680">♕</text>
+    <text x="440" y="680">♔</text><text x="520" y="680">♗</text><text x="600" y="680">♘</text><text x="680" y="680">♖</text>
+    <text x="120" y="600">♙</text><text x="200" y="600">♙</text><text x="440" y="600">♙</text><text x="520" y="600">♙</text>
+    <text x="600" y="600">♙</text><text x="680" y="600">♙</text><text x="280" y="440">♙</text><text x="360" y="440">♙</text>
+  </g>
+</svg>

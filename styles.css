@@ -729,6 +729,50 @@ h3 {
   min-height: 210px;
 }
 
+.opening-visuals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.opening-visuals figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.opening-visuals img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.opening-visuals figcaption {
+  margin-top: 8px;
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.opening-visuals b,
+.opening-visuals em {
+  display: block;
+}
+
+.opening-visuals b {
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+
+.opening-visuals em {
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+}
+
 .chess-note {
   margin-bottom: 0;
 }
@@ -775,6 +819,26 @@ h3 {
 .chess-status {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.snooker-card {
+  align-items: flex-start;
+}
+
+.interest-photo {
+  width: min(100%, 320px);
+  height: min(240px, calc((100vw - 64px) * 0.75));
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 52%;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.snooker-card p {
+  max-width: 36ch;
 }
 
 .contact-portrait {
