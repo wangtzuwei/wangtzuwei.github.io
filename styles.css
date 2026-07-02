@@ -603,6 +603,28 @@ h3 {
   margin-top: 8px;
 }
 
+.role-photo {
+  margin: 18px 0 0;
+}
+
+.role-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.role-photo figcaption {
+  margin-top: 8px;
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
