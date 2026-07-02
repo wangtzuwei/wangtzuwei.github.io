@@ -14,8 +14,8 @@
       .coord { fill: #536067; font: 700 20px Inter, Arial, sans-serif; text-anchor: middle; }
       .rank { dominant-baseline: middle; }
       .piece { font: 58px "Segoe UI Symbol", "Noto Sans Symbols 2", "Arial Unicode MS", serif; text-anchor: middle; dominant-baseline: central; }
-      .white { fill: #fbfcfc; stroke: #202828; stroke-width: 1.6px; paint-order: stroke; }
-      .black { fill: #111414; stroke: #f2dfc5; stroke-width: 0.8px; paint-order: stroke; }
+      .white { fill: #ded0bd; stroke: #4f3a2a; stroke-width: 1.8px; paint-order: stroke; }
+      .black { fill: #080808; stroke: #d0b994; stroke-width: 1px; paint-order: stroke; }
       .highlight { fill: #1f5eff; opacity: 0.2; }
     </style>
   </defs>
@@ -36,15 +36,15 @@
   </g>
 
   <g class="piece black">
-    <text x="120" y="120">♜</text><text x="200" y="120">♞</text><text x="280" y="120">♝</text><text x="360" y="120">♛</text>
-    <text x="440" y="120">♚</text><text x="520" y="120">♝</text><text x="600" y="120">♞</text><text x="680" y="120">♜</text>
-    <text x="120" y="200">♟</text><text x="200" y="200">♟</text><text x="280" y="200">♟</text><text x="440" y="200">♟</text>
-    <text x="520" y="200">♟</text><text x="600" y="200">♟</text><text x="680" y="200">♟</text><text x="360" y="360">♟</text>
+    <text x="120" y="120">&#9820;</text><text x="200" y="120">&#9822;</text><text x="280" y="120">&#9821;</text><text x="360" y="120">&#9819;</text>
+    <text x="440" y="120">&#9818;</text><text x="520" y="120">&#9821;</text><text x="600" y="120">&#9822;</text><text x="680" y="120">&#9820;</text>
+    <text x="120" y="200">&#9823;</text><text x="200" y="200">&#9823;</text><text x="280" y="200">&#9823;</text><text x="440" y="200">&#9823;</text>
+    <text x="520" y="200">&#9823;</text><text x="600" y="200">&#9823;</text><text x="680" y="200">&#9823;</text><text x="360" y="360">&#9823;</text>
   </g>
   <g class="piece white">
-    <text x="120" y="680">♖</text><text x="200" y="680">♘</text><text x="280" y="680">♗</text><text x="360" y="680">♕</text>
-    <text x="440" y="680">♔</text><text x="520" y="680">♗</text><text x="600" y="680">♘</text><text x="680" y="680">♖</text>
-    <text x="120" y="600">♙</text><text x="200" y="600">♙</text><text x="440" y="600">♙</text><text x="520" y="600">♙</text>
-    <text x="600" y="600">♙</text><text x="680" y="600">♙</text><text x="280" y="440">♙</text><text x="360" y="440">♙</text>
+    <text x="120" y="680">&#9814;</text><text x="200" y="680">&#9816;</text><text x="280" y="680">&#9815;</text><text x="360" y="680">&#9813;</text>
+    <text x="440" y="680">&#9812;</text><text x="520" y="680">&#9815;</text><text x="600" y="680">&#9816;</text><text x="680" y="680">&#9814;</text>
+    <text x="120" y="600">&#9817;</text><text x="200" y="600">&#9817;</text><text x="440" y="600">&#9817;</text><text x="520" y="600">&#9817;</text>
+    <text x="600" y="600">&#9817;</text><text x="680" y="600">&#9817;</text><text x="280" y="440">&#9817;</text><text x="360" y="440">&#9817;</text>
   </g>
 </svg>

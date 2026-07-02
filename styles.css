@@ -825,16 +825,63 @@ h3 {
   align-items: flex-start;
 }
 
-.interest-photo {
-  width: min(100%, 320px);
-  height: min(240px, calc((100vw - 64px) * 0.75));
+.snooker-visuals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.snooker-visuals figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.snooker-visuals figcaption {
+  margin-top: 8px;
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.snooker-visuals b,
+.snooker-visuals em {
+  display: block;
+}
+
+.snooker-visuals b {
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+
+.snooker-visuals em {
+  font-style: normal;
+}
+
+.snooker-visuals a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.snooker-visuals img {
+  width: 100%;
+  height: clamp(120px, 16vw, 180px);
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: 50% 52%;
-  margin-bottom: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface-2);
+}
+
+.interest-photo {
+  object-fit: cover;
+  object-position: 50% 52%;
+}
+
+.interest-diagram {
+  object-fit: contain;
+  padding: 8px;
 }
 
 .snooker-card p {
@@ -988,6 +1035,14 @@ h3 {
   .contact-portrait {
     max-width: 220px;
     justify-self: start;
+  }
+
+  .snooker-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .snooker-visuals img {
+    height: clamp(180px, 58vw, 230px);
   }
 }
 
