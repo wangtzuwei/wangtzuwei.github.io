@@ -57,6 +57,7 @@ a {
 img,
 svg {
   display: block;
+  max-width: 100%;
 }
 
 button {
@@ -469,9 +470,9 @@ h3 {
 
 .award-logo {
   width: 100%;
-  height: 54px;
-  margin-bottom: 14px;
-  padding: 8px;
+  height: 64px;
+  margin-bottom: 16px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
@@ -480,7 +481,6 @@ h3 {
 }
 
 .square-award-logo {
-  height: 64px;
   padding: 4px;
   object-position: center center;
 }
@@ -540,6 +540,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
+  min-width: 0;
 }
 
 .route-card,
@@ -589,7 +590,7 @@ h3 {
 
 .project-card-with-proof {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 136px;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 172px);
   gap: 18px;
   align-items: start;
 }
@@ -609,7 +610,7 @@ h3 {
 
 .role-photo img {
   width: 100%;
-  height: auto;
+  height: clamp(180px, 24vw, 260px);
   aspect-ratio: 2 / 1;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -655,18 +656,21 @@ h3 {
   grid-column: span 2;
   min-height: 280px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 172px);
   gap: 18px;
   align-items: start;
 }
 
 .proof-thumb {
+  width: 100%;
+  max-width: 172px;
+  justify-self: end;
   margin: 0;
 }
 
 .proof-thumb img {
-  width: 150px;
-  height: 112px;
+  width: 100%;
+  height: clamp(112px, 10vw, 132px);
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -675,9 +679,8 @@ h3 {
 }
 
 .lab-thumb img {
-  width: 136px;
-  height: 181px;
-  aspect-ratio: auto;
+  height: clamp(188px, 15vw, 220px);
+  aspect-ratio: 3 / 4;
   background: #ffffff;
 }
 
@@ -738,6 +741,8 @@ h3 {
 
 .timeline article {
   min-height: 305px;
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline time {
@@ -747,8 +752,30 @@ h3 {
   font-weight: 820;
 }
 
+.timeline article p {
+  margin-bottom: 0;
+}
+
+.source-link {
+  align-self: flex-start;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  color: var(--primary);
+  font-size: 0.86rem;
+  font-weight: 780;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .contact-card {
   min-height: 210px;
+}
+
+.contact-card strong {
+  overflow-wrap: anywhere;
 }
 
 .opening-visuals {
@@ -1045,13 +1072,18 @@ h3 {
   }
 
   .proof-thumb img {
-    width: min(100%, 220px);
-    height: 150px;
+    width: 100%;
+    height: clamp(140px, 42vw, 170px);
+  }
+
+  .proof-thumb,
+  .lab-thumb {
+    max-width: 220px;
+    justify-self: start;
   }
 
   .lab-thumb img {
-    width: min(100%, 150px);
-    height: 200px;
+    height: clamp(190px, 58vw, 240px);
   }
 
   .contact-portrait {
