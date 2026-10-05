@@ -1,6 +1,8 @@
 # Tzu-Wei Wang Personal Site
 
-Static multi-page GitHub Pages portfolio built from the TSMC CV.
+Static multi-page GitHub Pages portfolio updated from WangTzuWei_CV.docx (2026Aug).
+
+The public CV download is assets/WangTzuWei_CV.pdf. Research and publication statuses follow the supplied CV, including the incoming NIMS internship and manuscripts under review or in preparation.
 
 ## Local Preview
 

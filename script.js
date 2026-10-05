@@ -2,13 +2,24 @@ const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
 const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
 
-const storedTheme = localStorage.getItem("portfolio-theme");
+let storedTheme;
+try {
+  storedTheme = localStorage.getItem("portfolio-theme");
+} catch {
+  // A blocked storage policy should not prevent navigation or theme controls.
+}
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+const initialTheme = ["light", "dark"].includes(storedTheme)
+  ? storedTheme
+  : (prefersDark ? "dark" : "light");
 
 function setTheme(theme) {
   root.dataset.theme = theme;
-  localStorage.setItem("portfolio-theme", theme);
+  try {
+    localStorage.setItem("portfolio-theme", theme);
+  } catch {
+    // The selected theme still works for the current page.
+  }
   if (themeToggle) {
     themeToggle.setAttribute(
       "aria-label",
@@ -30,6 +41,9 @@ const currentPage = location.pathname.split("/").pop() || "index.html";
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
   link.classList.toggle("is-active", href === currentPage);
+  if (href === currentPage) {
+    link.setAttribute("aria-current", "page");
+  }
 });
 
 const chessRatings = document.querySelector("[data-chess-ratings]");
